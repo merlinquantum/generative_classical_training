@@ -72,10 +72,6 @@ def sample_bitstrings(key, m, p, num_samples):
     return (u < p).astype(jnp.int32)
 
 
-def p_sigma(sigma):
-    return (1-jnp.exp(-1/(2*sigma**2)))/2
-
-
 # Adapted from: https://github.com/XanaduAI/iqpopt
 # License: Apache License 2.0
 def median_heuristic(X):
